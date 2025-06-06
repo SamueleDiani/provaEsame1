@@ -1,0 +1,13 @@
+<h1>Le carte del momento</h1>
+<section>
+  @for (card of dummyCards; track card.id) {
+    <div class="card-container">
+      <img src="{{ card.image }}">
+      <div class="text">
+        <h4>{{ card.name }}</h4>
+        <p>{{ card.description }}</p>
+      </div>
+      <app-button [text]="'Info'"></app-button>
+    </div>
+  }
+</section>

@@ -1,0 +1,19 @@
+<h1>Scambi e proposte</h1>
+
+<section>
+  <form>
+    <label>Seleziona carta richiesta</label>
+    <select [(ngModel)]="selectedRequestedCard" name="requestedCard" (change)="updateOfferedCards()">
+      @for (card of dummyCards; track card.id) {
+        <option>{{ card.name }}</option>
+      }
+    </select>
+
+    <label>Seleziona carta offerta</label>
+    <select [(ngModel)]="selectedOfferedCard" name="offeredCard">
+      @for (card of offeredCards; track card.id) {
+        <option>{{ card.name }}</option>
+      }
+    </select>
+  </form>
+</section>

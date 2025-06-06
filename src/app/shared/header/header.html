@@ -1,0 +1,25 @@
+<header>
+  <span class="img-container">
+    <img src="logo.png">
+  </span>
+
+  <ul class="primary-nav">
+    <li><a>Home</a></li>
+    <li><a>Carte</a></li>
+    <li><a>Info</a></li>
+    <li><a>Contatti</a></li>
+  </ul>
+
+  <div class="hamburger-nav">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon fontIcon="menu"></mat-icon>
+    </button>
+    <mat-menu  #menu="matMenu" class="hamburger-item-container">
+      <button class="hamburger-item" mat-menu-item><a>Home</a></button>
+      <button class="hamburger-item" mat-menu-item><a>Carte</a></button>
+      <button class="hamburger-item" mat-menu-item><a>Info</a></button>
+      <button class="hamburger-item" mat-menu-item><a>Contatti</a></button>
+    </mat-menu>
+  </div>
+
+</header>

@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #006466;
+  background: linear-gradient(150deg,rgba(0, 100, 102, 1) 0%, rgba(77, 25, 77, 1) 100%);
+/* background-repeat: no-repeat;*/
+  background-attachment: fixed;
+ /* background-size: cover;*/
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:hover {
+  color: #ff9f1c;
+  transition: .3s;
+}
+
+p {
+  font-size: 18px;
+}
+
+.colored-text {
+  /*color: #ff9f1c;
+  background: #FF9F1C;*/
+  background: linear-gradient(162deg,rgba(255, 159, 28, 1) 0%, rgba(161, 74, 74, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 15px;
+  }
+}
