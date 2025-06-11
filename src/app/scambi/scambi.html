@@ -1,19 +1,64 @@
-<h1>Scambi e proposte</h1>
+<h1 class="title">Scambi e proposte</h1>
 
 <section>
-  <form>
-    <label>Seleziona carta richiesta</label>
-    <select [(ngModel)]="selectedRequestedCard" name="requestedCard" (change)="updateOfferedCards()">
-      @for (card of dummyCards; track card.id) {
-        <option>{{ card.name }}</option>
-      }
-    </select>
 
-    <label>Seleziona carta offerta</label>
-    <select [(ngModel)]="selectedOfferedCard" name="offeredCard">
-      @for (card of offeredCards; track card.id) {
-        <option>{{ card.name }}</option>
-      }
-    </select>
-  </form>
+  <mat-tab-group class="tab">
+    <mat-tab label="Area Scambi" (click)="status = State.scambi">
+      <div class="scambi">
+        <div class="card-scambi">
+          <p><b>Offerta: </b> Custode della Foresta</p>
+          <mat-icon>arrow_downward</mat-icon>
+          <p><b>Offerta: </b> Drago Cremisi</p>
+          <p><b>Messaggio:</b> Sono interessato a uno scambio equo</p>
+        </div>
+
+        <div class="card-scambi">
+          <p><b>Offerta: </b> Custode della Foresta</p>
+          <mat-icon>arrow_downward</mat-icon>
+          <p><b>Offerta: </b> Drago Cremisi</p>
+          <p><b>Messaggio:</b>  Questa carta completa la mia collezione</p>
+        </div>
+
+        <div class="card-scambi">
+          <p><b>Offerta: </b> Custode della Foresta</p>
+          <mat-icon>arrow_downward</mat-icon>
+          <p><b>Offerta: </b> Drago Cremisi</p>
+          <p><b>Messaggio:</b> Offerta rara, contattami se vuoi trattare!</p>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Crea Proposta" (click)="status = State.scambi">
+      <div class="form-container">
+        <form #scambioForm="ngForm" (ngSubmit)="onSubmit()">
+          <h2>Proponi uno scambio</h2>
+          <mat-form-field class="field" appearance="fill">
+          <mat-label>Richiesta</mat-label>
+          <mat-select [(ngModel)]="selectedRequest" name="richiesta" required>
+            @for (card of dummyCards; track card.id) {
+              <mat-option [value]="card.name">{{card.name}}</mat-option>
+            }
+          </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Offerta</mat-label>
+            <mat-select [(ngModel)]="selectedOffer" name="offerta" required>
+              @for (card of dummyCards; track card.id) {
+                <mat-option [value]="card.name">{{card.name}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Messaggio (opzionale)</mat-label>
+            <textarea matInput [(ngModel)]="message" name="messaggio"></textarea>
+          </mat-form-field>
+        </form>
+        <app-button [text]="'Crea'" (click)="onSubmit()"></app-button>
+      </div>
+    </mat-tab>
+    <mat-tab label="Proposte" (click)="status = State.proposte"> content 3 </mat-tab>
+  </mat-tab-group>
+
 </section>

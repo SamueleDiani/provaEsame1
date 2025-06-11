@@ -1,0 +1,45 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 150px;
+  column-gap: 100px;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 80px;
+}
+
+.colored-text {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .not-found {
+    flex-direction: column;
+    margin: 30px 80px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+}

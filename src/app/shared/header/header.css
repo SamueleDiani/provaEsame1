@@ -44,7 +44,7 @@ img {
 }
 
 .hamburger-item:hover {
-  background-color: #272640 !important;
+
   color: #ff9f1c;
   transition: .3s;
 }

@@ -1,0 +1,99 @@
+.title {
+  text-align: center;
+
+}
+
+section {
+  margin: 100px 100px;
+}
+
+.tab {
+  overflow-x: hidden;
+}
+
+ul {
+  color: whitesmoke;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  color: #bfbebe;
+  transition: .3s;
+}
+
+.scambi {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 80px;
+
+}
+
+.card-scambi {
+  background-color: #dad9d9;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 25px;
+  padding: 15px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-scambi:hover {
+  transform: scale(1.05);
+  transition: .3s;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+form {
+  margin: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dad9d9;
+  width: 50%;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .scambi {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 30px 50px;
+  }
+
+  .card-scambi {
+    margin: 20px 0 ;
+    width: 80%;
+  }
+
+  form {
+    width: 100%;
+    min-width: 300px;
+  }
+
+}
+

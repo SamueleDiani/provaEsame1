@@ -44,7 +44,7 @@ section {
   .info-container:nth-child(even), .info-container:nth-child(odd) {
     flex-direction: column;
     align-items: center;
-    padding: 30px 60px;
+    padding: 30px 30px;
   }
 
   .text {

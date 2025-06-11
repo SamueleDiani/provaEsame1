@@ -2,12 +2,12 @@ button {
   cursor: pointer;
   all: unset;
   padding: 8px 15px;
-  background-color: #065a60;
-  color: #ff9f1c;
+  background-color: #ff9f1c;
+  color: #065a60;
 }
 
 button:hover {
-  background-color: #065a60;
+  background-color: #dc8a1a;
   border-radius: 20px;
   transition: .3s;
   transform: scale(1.1);
